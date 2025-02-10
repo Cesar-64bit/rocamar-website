@@ -1,0 +1,253 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('/img/hero.webp') center/cover no-repeat;
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+.hero-title {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+.hero-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+.hero-button:hover {
+    background: #222222;
+    color: #FFFFFF;
+}
+
+.about-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    background: white;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.about-text-content {
+    flex: 1;
+}
+.about-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.about-text {
+    font-size: 1.2rem;
+    color: #555555;
+}
+
+.services-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    background: #F9F9F9;
+}
+.services-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.services-grid {
+    display: grid;
+
+    gap: 30px;
+}
+.service-card {
+    padding: 30px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222222;
+}
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.service-text {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.gallery-section {
+    padding: 100px 10%;
+    background: white;
+    text-align: center;
+}
+.gallery-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.gallery-masonry {
+    columns: 3;
+    gap: 20px;
+}
+.gallery-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+    padding: 50px 10%;
+    background: #222222;
+    color: #FFFFFF;
+    text-align: center;
+}
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.footer-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+.footer-text {
+    font-size: 1rem;
+    color: #DDDDDD;
+    margin-bottom: 30px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons a {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #E67E22;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        max-width: 100%;
+    }
+    .about-title, .services-title, .gallery-title {
+        font-size: 2.5rem;
+    }
+    .gallery-masonry {
+        columns: 2;
+    }
+}
+@media (max-width: 480px) {
+    .gallery-masonry {
+        columns: 1;
+    }
+}
